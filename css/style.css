@@ -1,0 +1,502 @@
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    background-color: #f0f0f0; /* Light background for better contrast */
+    color: #333; /* Darker text for better readability */
+}
+main {
+    padding: 30px; 
+}
+
+section {
+    margin-bottom: 30px; /* MAKE RESPONSIVE */
+    padding: 15px; /* MAKE RESPONSIVE*/
+    background-color: #fff; /* White background for sections */
+    border-radius: 8px; /* MAKE RESPONSIVE */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Skip to Main Styles */
+body > a {
+    color: #333; /* Darker link color */
+    font-size: 0.8em; /* Slightly smaller font size */
+    position: absolute;
+    left: -999px; /* Hide link off-screen until tabbing, accessible to screen reader*/
+}
+
+body > a:focus {
+    position: static; /* Make link visible on focus */
+}
+
+body > a:hover {
+    position: static; /* Make link visible on hover */
+}
+
+/* Nav Styles */
+nav {
+    background-color: #333; /* Dark background for nav */
+    padding: 2%;/* Add padding for better spacing*/
+    font-size: 0.8em; /* Slightly larger font size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    border-bottom: 7px solid rgb(187, 218, 237); /* Border color */
+}
+
+nav ul {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 0; /* Remove padding */
+    margin-left: 5px; /* Space on the left */
+    text-align: center; /* Center items */
+    text-justify: center; /* Center items */
+}
+
+
+nav ul li {
+    margin-right: 10%; /* Increased space between nav items*/ 
+}
+
+nav ul li:last-child {
+    margin-right: auto; /* Push last item to the right */
+}
+
+nav ul li i {
+    color: rgb(187, 218, 237); /* Icon color */
+    display: inline-block; /* Allow margin auto */
+    font-size: 1.5em; /* Larger icon size */
+}
+
+nav ul li a {
+    color: white; /* White link color */
+    border-radius: 5px; /* Rounded corners for smoother appearance */
+    transition: color 0.5s, background-color 0.5s; /* Add transition for smoother effect */
+}
+
+nav ul li a:hover {
+    color:rgb(187, 218, 237); /* Change link color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background change on hover */
+
+}   
+
+nav ul li a:focus {
+    color: rgb(187, 218, 237); /* Change link color on focus */
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background change on hover */
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 20px; /* MAKE THIS RESPONSIVE */
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+h1 {
+    font-size: 1.4em; /* Larger title size */
+    margin-bottom: 10px; /* Space below title MAKE THIS RESPONSIVE */ 
+    color:rgb(7, 85, 133); /* Change title color to match theme */
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+h2 {
+    color: #666;
+    font-size: 1.15em;
+
+}
+
+header .skyline-logo {
+    width: 4em; /* Set a fixed width */
+    height: 4em; /* Set a fixed height */
+    display: block; /* Allow margin auto */
+    margin: auto; /* Center logo */
+    padding-top: 0.5em; /* Space above logo */
+}
+
+/* Summary Styling */
+p .athlete {
+    font-weight: bold;
+}
+p .time {
+    font-style: italic;
+}
+
+.summary_header {
+    font-size: 1.5em;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#toggle-summary-btn {
+    background-color: rgb(7, 85, 133);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+#toggle-summary-btn:hover {
+    background-color: rgb(121, 175, 209);
+}
+
+#toggle-summary-btn:focus {
+    outline: 2px solid rgb(2, 34, 54);
+    outline-offset: 2px;
+}
+
+/* Table styles */
+
+table {
+    border-collapse: collapse; /* Ensure no space between borders */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 400px; /* Set height for scrolling */
+    display: block; /* Enable overflow if you add this back then it will be able to scroll but it wont fill up the whole page*/
+    width: 100%; /* Allow table to be responsive */
+}
+
+
+th, td {
+    padding: 10px; /* MAKE RESPONSIVE */
+    text-align: center;
+}
+
+th {
+    background-color: rgb(7, 85, 133); /* Consistent header color */
+    color: white;
+    font-size: 1.1em; /* Slightly smaller for better proportion */
+    position: sticky; /* Keep headers fixed at the top */
+    top: 0; /* Align to top */
+    z-index: 1; /* Ensure headers are on top */
+}
+
+td {
+    background-color: #f9f9f9; /* Light gray for table cells */
+}
+
+td:hover { /* Hover effect on table cells, for some reason this won't work on the entire row??? */
+    background-color: rgb(181, 220, 244); /* Light highlight on row hover */
+    transition: background-color 0.3s;
+}
+td:focus { /* Hover effect on table cells, for some reason this won't work on the entire row??? */
+    background-color: rgb(181, 220, 244); /* Light highlight on row hover */
+    transition: background-color 0.3s;
+}
+
+
+td:nth-child(3n+1) {
+    background-color: #e0e0e0; /* Different background for every third column */
+    font-weight: bold;
+}
+
+/* Individual results styles */
+
+#individual-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px; /* Space between athlete cards */
+    max-height: calc(5 * 200px + 60px); /* Assuming each athlete card is roughly 200px tall and adding some margin */
+    overflow-y: auto; /* Enable vertical scrolling */
+    /* can remove this below ?*/
+    padding: 10px; /* Optional padding for aesthetics */
+}
+
+#individual-results .athlete {
+    border: .75rem solid #ddd;
+    padding: .75rem; /* Space inside athlete cards MAKE RESPONSIVE */
+    background-color: rgb(187, 218, 237); /* Light background for athlete cards */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    border-radius: 8px; /* Rounded corners for athlete cards */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    width: auto; /* Allow cards to be responsive IS THIS REDUNDANT BC OF GRID*/
+    height: auto; /* Allow cards to be responsive IS THIS REDUNDANT BC OF GRID */
+    transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+#individual-results .athlete:nth-child(2n) {
+    background-color: rgb(121, 175, 209); ; /* different color for every other card*/
+}
+
+ #individual-results .athlete:hover {
+        transform: scale(1.05); /* Slightly enlarge the card */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhance shadow */
+    }
+
+#individual-results .athlete:focus {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhance shadow */
+}
+
+
+#individual-results h2 {
+    grid-column: 1 / -1; /* Full width for title */
+}
+ 
+.athlete dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 0.9rem; /* Smaller font size for details */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px; /* Space below details */
+    
+
+}
+
+.athlete dl dt {
+    font-weight: bold;
+    text-align: left;
+}
+
+.athlete dl dd {
+    text-align: right;
+}
+
+
+.athlete img {
+    /* max-width: 100%; Fill the container */
+    width: 230px; /* Set a fixed width */
+    height: 230px; /* Set a fixed height */
+    /* max-height: 90%; Limit height to prevent stretching */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 5px; /* Rounded corners for images */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); 
+}
+
+
+.athlete figcaption {
+    text-align: center;
+    font-size: 1.15em;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px; /* Space above captions */
+    margin-bottom: 10px; /* Space below captions */
+    font-weight: bold;
+}
+
+/* Gallery Section */
+#gallery {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Ensures content is not cut off */
+}
+
+.gallery-header {
+    font-size: 1.5em;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#gallery-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+    transition: max-height 0.5s ease-in;
+    overflow: visible; /* Make sure the content overflows properly */
+}
+
+#gallery-images img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#gallery-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+#gallery-images img:focus {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Collapsible Styles */
+.collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.collapsible.show {
+    max-height: 30000px; /* Large enough to show all content */
+    transition: max-height 0.5s ease-in;
+}
+
+/* Button Styling */
+#toggle-gallery {
+    background-color:rgb(7, 85, 133);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggle-gallery:hover {
+    background-color: rgb(121, 175, 209); /* Darker shade on hover */
+}
+
+#toggle-gallery:focus {
+    outline: 2px solid rgb(2, 34, 54);
+    outline-offset: 2px;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    margin-top: 20px; /* Space above footer */
+}
+
+footer a {
+    transition: color 0.5s, background-color 0.5s; /* Add transition for smoother effect */
+    padding: 5px 10px; /* Add padding for the background effect */
+    border-radius: 5px; /* Rounded corners for smoother appearance */
+}   
+
+footer a:hover {
+    color: rgb(212, 239, 248); /* Change link color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background change on hover */
+
+}   
+
+footer a:focus {
+    color: rgb(212, 239, 248); /* Change link color on focus */
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background change on hover */
+}
+
+/* Extra Home Page Styling */
+
+nav ul.homepage_nav {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: flex-start; /* Align items to the left */
+    padding-left: 0;
+    margin-left: 0;
+}
+
+nav ul.homepage_nav li {
+    margin-right: 1.5rem; /* Provide space between icon and link */
+}
+
+ul.homepage_meets {
+    list-style: none;
+    padding: 0;
+}
+
+ul.homepage_meets li {
+    margin-bottom: 0.6rem; /* Space between list items */
+    list-style-type: square; /* Use disc for list items */
+    margin-left: 1.5rem; /* Indent list items */
+}
+
+ul.homepage_meets li a {
+    color: rgb(7, 85, 133);
+    transition: color 0.3s;
+}
+
+ul.homepage_meets li a:hover {
+    color: #002f6c; /* Darker shade for hover effect */
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background change on hover */
+}
+
+ul.homepage_meets li a:focus {
+    color: #002f6c; /* Darker shade for focus effect */
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background change on focus */
+}
+
+.mens_meets {
+    margin-top: 1.5em; /* Space above */
+}
+
+.mens_meets, .womens_meets {
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 300px; /* Set a max height for scrolling */
+    padding-top: 0; /* Remove padding above */
+
+}
+
+.mens_meets h2, .womens_meets h2 {
+    background-color: white; /* White background for headings */
+    position: sticky; /* Space below headings */
+    top:0; /* Align to top */
+    padding: 10px; /* Padding for headings */
+   
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    nav ul {
+        margin-right: 20px; /* Increase space on larger screens */
+    }
+    nav {
+        padding: 10px; /* Add padding for better spacing */
+        font-size: 1em; /* Larger font size */
+    
+    }
+    nav ul li i {
+        font-size: 2em; /* Larger icon size */
+    }
+    h2 {
+        margin-bottom: 1%; /* Space below subtitles */
+    }
+
+    #individual-results {
+        grid-template-columns: repeat(3, 1fr); /* Adjust grid for larger screens */
+    }
+}
+
+/* Media query for prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    /* Remove transitions for hover and focus effects */
+    #individual-results .athlete {
+        transition: none; /* Disable transitions */
+    }
+
+    #individual-results .athlete:hover,
+    #individual-results .athlete:focus {
+        transform: none; /* Disable hover/focus effects */
+        box-shadow: none; /* Disable shadow changes */
+    }
+
+    nav ul li a {
+        transition: none; /* Disable transitions for nav links */
+    }
+
+    td:hover,
+    td:focus {
+        background-color: #f9f9f9; /* Keep background consistent */
+        transition: none; /* Disable transitions */
+    }
+}
+
+@media (min-width: 1024px) {
+    #individual-results {
+        grid-template-columns: repeat(4, 1fr); /* Adjust grid for even larger screens */
+    }
+    nav ul li i {
+        font-size: 2.5em; /* Even larger icon size */
+    }
+
+}
+
+
