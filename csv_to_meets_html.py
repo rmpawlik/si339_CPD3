@@ -98,12 +98,12 @@ def csv_to_html(csv_filename, output_folder):
     let hiddenText = document.getElementById('hidden-summary');
     let btnText = document.getElementById('toggle-summary-btn');
 
-    if (hiddenText.style.display === 'none') {
-        hiddenText.style.display = 'inline';
-        btnText.textContent = 'Hide';
+    if (hiddenText.style.display === "none") {
+        hiddenText.style.display = "inline";
+        btnText.textContent = "Hide";
     } else {
-        hiddenText.style.display = 'none';
-        btnText.textContent = 'Show More';
+        hiddenText.style.display = "none";
+        btnText.textContent = "Show More";
     }
 }
 </script>"""
