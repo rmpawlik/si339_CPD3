@@ -149,6 +149,7 @@ table {
     overflow-y: auto; /* Enable vertical scrolling */
     max-height: 400px; /* Set height for scrolling */
     display: block; /* Enable overflow */
+    margin-top: 10px; /* Space above table */
 }
 
 th, td {
@@ -269,27 +270,23 @@ td:nth-child(3n+1) {
 
 #gallery-images {
     display: grid; /* Use grid layout for images */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    grid-template-columns: 1fr;
     gap: 15px; /* Space between images */
     margin-top: 15px; /* Space above images */
     transition: max-height 0.5s ease-in; /* Transition for height */
     overflow: visible; /* For content overflow */
+    padding-left: 20px; /* Space on the left */
+    padding-right: 20px; /* Space on the right */
+    padding-top: 10px; /* Space above images */
 }
 
 #gallery-images img {
-    width: 100%; /* Full width for images */
+    width: auto; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Rounded corners for images */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for images */
     transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
-}
-
-#gallery-images img:hover {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
-}
-#gallery-images img:focus {
-    transform: scale(1.05); /* Slightly enlarge the image on focus */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhance shadow on focus */
+    margin-bottom: 20px; /* Space below images */
 }
 
 /* Collapsible Styles */
@@ -300,7 +297,7 @@ td:nth-child(3n+1) {
 }
 
 .collapsible.show {
-    max-height: 30000px; /* Large value to allow expansion */
+    max-height: 100000px; /* Large value to allow expansion */
     transition: max-height 0.5s ease-in; /* Transition for height */
 }
 
