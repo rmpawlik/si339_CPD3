@@ -247,7 +247,7 @@ def extract_meet_id(url):
         raise ValueError("Meet ID not found in URL.")
 
 # Step 2: Select 12 random photos from the folder
-def select_random_photos(folder_path, num_photos=25):
+def select_random_photos(folder_path, num_photos=5):
     # List all files in the folder
     print(f"Checking {folder_path}")
     all_files = os.listdir(folder_path)
