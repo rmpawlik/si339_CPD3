@@ -160,7 +160,7 @@ def csv_to_html(csv_filename, output_folder):
     <div id="gallery-images" class="collapsible">
         """
 
-        html_content += create_meet_image_gallery(url)
+        html_content += create_meet_image_gallery(link_url)
         # Close the HTML document
         html_content += """
    </div>
@@ -268,7 +268,7 @@ def generate_image_tags(image_files, folder_path):
     for img in image_files:
         img_path = os.path.join(folder_path, img)
         # print(f"The image_path is {img_path}")
-        img_tags.append(f'<img src=../{img_path} width = "200" alt="">')
+        img_tags.append(f'<img src="../{img_path}" width = "200" alt="">')
     return "\n".join(img_tags)
 
 # Putting it all together
@@ -292,9 +292,9 @@ def create_meet_image_gallery(url):
     return html_image_tags
 
 # Example usage
-url = "https://www.athletic.net/CrossCountry/meet/235827/results/943367"
-html_gallery = create_meet_image_gallery(url)
-print(html_gallery)
+# url = "https://www.athletic.net/CrossCountry/meet/235827/results/943367"
+# html_gallery = create_meet_image_gallery(url)
+# print(html_gallery)
 
 
 
