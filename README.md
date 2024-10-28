@@ -6,3 +6,4 @@ Client Project Deliverable #3, XC Website Mobile Styling
 - Meets folder contains all updated meets pages
 - all necessary images in images folder
 - all styles added on style.css file in css folder
+- homepage hosted at https://rmpawlik.github.io/si339_CPD3/
