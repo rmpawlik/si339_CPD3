@@ -196,6 +196,7 @@ def csv_to_html(csv_filename, output_folder):
 
 
                      </footer>
+                <script src="../js/starter.js"></script>
         </body>
 </html>
 """
